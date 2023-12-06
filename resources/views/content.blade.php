@@ -104,7 +104,11 @@
 
                             {{-- Pengulangan untuk mengambil nilai bulan --}}
                             @for ($i = 1; $i <= 12; $i++)
+                            @if ($jumlah[$i] == 0)
+                            <td></td>
+                            @else
                                 <td class="fw-bold">{{ number_format($jumlah[$i], 0, ',', '.') }}</td>
+                            @endif    
                             @endfor
 
                             {{-- Hasil Total --}}

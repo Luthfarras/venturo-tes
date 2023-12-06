@@ -50,8 +50,8 @@ class HomeController extends Controller
 
             //isi total bwh
             foreach ($trans as $perbulan) {
-                $dino = date('n', strtotime($perbulan->tanggal));
-                $jumlah[$dino] += $perbulan->total;
+                $bln = date('n', strtotime($perbulan->tanggal));
+                $jumlah[$bln] += $perbulan->total;
             }
 
             //fungsi total kanan
