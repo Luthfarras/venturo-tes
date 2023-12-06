@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container-fluid">
     <div class="card mt-3">
         <div class="card-header">
             Venturo - Laporan Penjualan tahunan per menu
@@ -10,7 +10,7 @@
                     <div class="">
                         @csrf
                         <select name="tahun" class="form-select" aria-label="Default select example">
-                            <option selected disabled>Pilih Tahun</option>
+                            <option value="">Pilih Tahun</option>
                             <option value="2021" @selected($tahun == 2021)>2021</option>
                             <option value="2022" @selected($tahun == 2022)>2022</option>
                         </select>
@@ -29,9 +29,9 @@
                 </div>
             </form>
         </div>
-    <hr>
         @isset($data)
-            <div class="container">
+        <hr>
+            <div class="container-fluid">
                 <table class="table">
                     <thead>
                         <tr class="table-dark">
